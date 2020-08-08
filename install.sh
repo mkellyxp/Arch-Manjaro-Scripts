@@ -27,7 +27,7 @@ else
     echo "* Setting Permissions *"
     echo "***********************"
 
-    sudo chgrp -R httpd /srv/http
+    sudo chgrp -R http /srv/http
     sudo find /srv/http -type d -exec chmod g+rx {} +
     sudo find /srv/http -type f -exec chmod g+r {} +
 
