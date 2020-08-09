@@ -21,6 +21,8 @@ else
     sudo systemctl enable mysqld
     sudo systemctl start mysqld
 
+    sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+
     echo ""
     echo ""
     echo "***********************"
