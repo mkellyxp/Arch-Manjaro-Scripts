@@ -15,18 +15,16 @@ else
 
     sudo pacman -S apache php php-gd php-apache mysql
 
-    sudo systemctl enable httpd
-    sudo systemctl start httpd
-
-    sudo systemctl enable mysqld
-    sudo systemctl start mysqld
-
     echo 'LoadModule mpm_prefork_module modules/mod_mpm_prefork.so' | sudo tee -a /etc/httpd/conf/httpd.conf
     echo 'LoadModule php7_module modules/libphp7.so' | sudo tee -a /etc/httpd/conf/httpd.conf
     echo 'AddHandler php7-script php' | sudo tee -a /etc/httpd/conf/httpd.conf
     echo 'Include conf/extra/php7_module.conf' | sudo tee -a /etc/httpd/conf/httpd.conf
 
+    sudo systemctl enable httpd
+    sudo systemctl start httpd
 
+    sudo systemctl enable mysqld
+    sudo systemctl start mysqld
 
     sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 
