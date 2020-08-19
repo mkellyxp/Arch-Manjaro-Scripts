@@ -20,13 +20,13 @@ else
     echo 'AddHandler php7-script php' | sudo tee -a /etc/httpd/conf/httpd.conf
     echo 'Include conf/extra/php7_module.conf' | sudo tee -a /etc/httpd/conf/httpd.conf
 
+    sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+
     sudo systemctl enable httpd
     sudo systemctl start httpd
 
     sudo systemctl enable mysqld
     sudo systemctl start mysqld
-
-    sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 
     echo ""
     echo ""
