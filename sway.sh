@@ -3,7 +3,7 @@
 sudo pacman -Syyuu
 
 # Install base swayt stuff
-sudo pacman -S sway xorg-xwayland acpilight
+sudo pacman -S sway xorg-xwayland acpilight termite
 yay -S rofi-lbonn-wayland-git
 
 # Install coding and personal apps
