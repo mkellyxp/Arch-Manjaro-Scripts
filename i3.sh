@@ -3,7 +3,7 @@
 sudo pacman -Syyuu
 
 # Install base i3 stuff
-sudo pacman -S xorg xorg-xinit i3 dmenu acpilight picom
+sudo pacman -S xorg xorg-xinit i3 dmenu acpilight picom termite
 
 # Install coding and personal apps
 sudo pacman -S code telegram-desktop neovim git dbeaver
