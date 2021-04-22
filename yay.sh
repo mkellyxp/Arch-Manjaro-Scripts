@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install yay
 cd /opt/
 sudo git clone https://aur.archlinux.org/yay-git.git
