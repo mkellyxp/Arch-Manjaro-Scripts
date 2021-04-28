@@ -5,7 +5,7 @@ sudo pacman -Syyuu
 # Install base gnome stuff
 sudo pacman -S xorg
 sudo pacman -S gnome
-sudo pacman -S base-devel gnome-tweaks firefox gdm libappindicator-gtk3 flatpak chrome-gnome-shell
+sudo pacman -S base-devel gnome-tweaks firefox gdm libappindicator-gtk3 flatpak chrome-gnome-shell gnome-disk-utility
 sudo pacman -S papirus-icon-theme ttf-fira-sans ttf-fira-code arc-gtk-theme
 sudo systemctl enable gdm
 
