@@ -5,7 +5,7 @@ sudo pacman -S base-devel archlinux-keyring
 sudo pacman -Syyuu
 
 # Install base sway stuff
-sudo pacman -S sway xorg-xwayland alacritty dmenu firefox neovim git
+sudo pacman -S sway xorg-xwayland alacritty dmenu firefox neovim git light pipewire pipewire-pulse pavucontrol
 
 # Install theme and and easy UI to switch
 sudo pacman -S lxappearance papirus-icon-theme arc-gtk-theme
