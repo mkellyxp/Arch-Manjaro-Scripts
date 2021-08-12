@@ -230,4 +230,6 @@ smart_borders on
 smart_gaps on
 gaps inner 20
 
+exec_always import-gsettings
+
 include /etc/sway/config.d/*
