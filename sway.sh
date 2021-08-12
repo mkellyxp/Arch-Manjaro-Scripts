@@ -1,12 +1,17 @@
 #!/bin/bash
 
 sudo pacman -Syyuu
+sudo pacman -S base-devel archlinux-keyring
+sudo pacman -Syyuu
 
-# Install base swayt stuff
-sudo pacman -S sway xorg-xwayland acpilight termite
-yay -S rofi-lbonn-wayland-git
+# Install base sway stuff
+sudo pacman -S sway xorg-xwayland alacritty dmenu firefox neovim git
+
+# Install theme and and easy UI to switch
+sudo pacman -S lxappearance papirus-icon-theme arc-gtk-theme
+
+# Install basic apps
+sudo pacman -S grim gthumb
 
 # Install coding and personal apps
-sudo pacman -S code telegram-desktop neovim git dbeaver
-yay -S gitkraken
-yay -S mailspring
+sudo pacman -S code telegram-desktop dbeaver filezilla
