@@ -15,3 +15,6 @@ sudo pacman -S grim gthumb
 
 # Install coding and personal apps
 sudo pacman -S code telegram-desktop dbeaver filezilla
+
+
+# Get inspiration from: https://www.fosskers.ca/en/blog/wayland
