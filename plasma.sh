@@ -3,12 +3,11 @@
 sudo pacman -Syyuu
 
 # Install base plasma stuff
-sudo pacman -S xorg plasma kde-graphics sddm konsole dolphin firefox gnome-keyring mintstick unzip
+sudo pacman -S xorg plasma kde-graphics sddm konsole dolphin chromium gnome-keyring unzip
 sudo pacman -Rs kimagemapeditor
 sudo systemctl enable sddm
 
 # Install coding and personal apps
-sudo pacman -S code telegram-desktop neovim git dbeaver elixir nodejs npm
-yay -S gitkraken
-yay -S mailspring
-yay -S spotify
+sudo pacman -S code telegram-desktop neovim git dbeaver nodejs npm
+
+sudo pacman -S flatpak
