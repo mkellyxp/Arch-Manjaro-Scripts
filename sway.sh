@@ -16,5 +16,10 @@ sudo pacman -S grim gthumb
 # Install coding and personal apps
 sudo pacman -S code telegram-desktop dbeaver filezilla
 
+mkdir ~/.themes
+cp -R /usr/share/themes/Arc-Dark
+sudo flatpak override --filesystem=$HOME/.themes
+sudo flatpak override --env=GTK_THEME=Arc-Dark 
+
 
 # Get inspiration from: https://www.fosskers.ca/en/blog/wayland
