@@ -16,3 +16,5 @@ mkdir ~/.themes
 cp -R /usr/share/themes/Breeze-Dark ~/.themes/
 sudo flatpak override --filesystem=$HOME/.themes
 sudo flatpak override --env=GTK_THEME=Breeze-Dark
+
+# sudo cp *.desktop /usr/share/applications/
