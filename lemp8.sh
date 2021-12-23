@@ -10,23 +10,23 @@ then
 else
     echo ""
     echo "*************************************"
-    echo "* Installing Apache, PHP, and MySql *"
+    echo "* Making Sure You're Up To Date     *"
     echo "*************************************"
 
-    sudo pacman -S apache php7 php7-gd php7-apache mysql
+    sudo pacman -Syu
 
-    echo 'LoadModule mpm_prefork_module modules/mod_mpm_prefork.so' | sudo tee -a /etc/httpd/conf/httpd.conf
-    echo 'LoadModule php7_module modules/libphp7.so' | sudo tee -a /etc/httpd/conf/httpd.conf
-    echo 'AddHandler php7-script php' | sudo tee -a /etc/httpd/conf/httpd.conf
-    echo 'Include conf/extra/php7_module.conf' | sudo tee -a /etc/httpd/conf/httpd.conf
+    echo ""
+    echo "*************************************"
+    echo "* Installing Nginx, PHP, and MySql  *"
+    echo "*************************************"
+
+    sudo pacman -S nginx php php-gd php-fpm mysql
 
     sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 
-    sudo systemctl enable httpd
-    sudo systemctl start httpd
-
-    sudo systemctl enable mysqld
-    sudo systemctl start mysqld
+    sudo systemctl enable --now nginx
+    sudo systemctl enable --now php-fpm
+    sudo systemctl enable --now mysqld
 
     echo ""
     echo ""
@@ -63,7 +63,7 @@ else
     echo "*                                                              *"
     echo "* - Visit 'http://localhost/info.php' to confirm PHP is set up *"
     echo "* - Your document root is set to: '/srv/http/'                 *"
-    echo "* - Your apache config is at: '/etc/httpd/conf'                *"
+    echo "* - Your apache config is at: '/etc/nginx'                *"
     echo "* - Your php config is at: '/etc/php/php.ini'                  *"
     echo "* - Log into mysql with: 'mysql -u root -p'                    *"
     echo "*                                                              *"
@@ -71,6 +71,20 @@ else
     echo "* - Restart mysql: 'sudo service mysql restart'                *"
     echo "*                                                              *"
     echo "****************************************************************"
-    echo ""
-    echo "NOTE: Please comment out the 'LoadModule mpm_event_module modules/mod_mpm_event.so' line in /etc/httpd/conf/httpd.conf "
 fi
+#
+#server {
+#    listen       80;
+#    server_name  localhost;
+#
+#    location / {
+#        root   /srv/http;
+#        index  index.html index.htm index.php;
+#    }
+#    location ~ \.php$ {
+#        fastcgi_pass   unix:/var/run/php-fpm/php-fpm.sock;
+#        fastcgi_index  index.php;
+#        root   /srv/http;
+#        include        fastcgi.conf;
+#    }
+#}

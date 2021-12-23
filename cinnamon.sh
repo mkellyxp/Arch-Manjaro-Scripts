@@ -3,10 +3,10 @@
 sudo pacman -Syyuu
 
 # Install base sway stuff
-sudo pacman -S xorg xorg-xinit cinnamon gnome-screenshot papirus-icon-theme arc-gtk-theme flatpak
+sudo pacman -S xorg xorg-xinit cinnamon gnome-screenshot gnome-terminal papirus-icon-theme arc-gtk-theme flatpak
 
 # Install coding and personal apps
-sudo pacman -S code telegram-desktop dbeaver filezilla
+sudo pacman -S chromium code telegram-desktop dbeaver filezilla
 
 mkdir ~/.themes
 cp -R /usr/share/themes/Arc-Dark ~/.themes/
