@@ -13,5 +13,5 @@ cp -R /usr/share/themes/Arc-Dark ~/.themes/
 sudo flatpak override --filesystem=$HOME/.themes
 sudo flatpak override --env=GTK_THEME=Arc-Dark 
 
-#~/.xinitrc
-#exec cinnamon-session
+touch ~/.xinitrc
+echo "exec cinnamon-session" > ~/.xinitrc
