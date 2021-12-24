@@ -2,7 +2,7 @@
 
 sudo pacman -Syyuu
 
-# Install base sway stuff
+# Install base stuff
 sudo pacman -S xorg xorg-xinit cinnamon gnome-screenshot gnome-terminal papirus-icon-theme arc-gtk-theme flatpak
 
 # Install coding and personal apps
