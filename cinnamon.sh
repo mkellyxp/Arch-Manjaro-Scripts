@@ -3,7 +3,7 @@
 sudo pacman -Syyuu
 
 # Install base stuff
-sudo pacman -S xorg xorg-xinit cinnamon gnome-screenshot gnome-terminal papirus-icon-theme arc-gtk-theme flatpak
+sudo pacman -S xorg xorg-xinit cinnamon gnome-screenshot gnome-terminal papirus-icon-theme arc-gtk-theme noto-fonts-emoji flatpak
 
 # Install coding and personal apps
 sudo pacman -S chromium code telegram-desktop dbeaver filezilla
