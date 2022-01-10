@@ -1,5 +1,14 @@
 #!/bin/bash
 
+if [ $USER == 'root' ]
+then
+    echo ""
+    echo "********************************************"
+    echo "* Run this as your user, NOT root or sudo! *"
+    echo "********************************************"
+
+else
+
 sudo pacman -Syyuu
 
 # Install base stuff
@@ -15,3 +24,5 @@ sudo flatpak override --env=GTK_THEME=Arc-Dark
 
 touch ~/.xinitrc
 echo "exec cinnamon-session" > ~/.xinitrc
+
+fi
