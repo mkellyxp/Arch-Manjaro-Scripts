@@ -3,23 +3,13 @@
 sudo pacman -Syyuu
 
 # Install base gnome stuff
-sudo pacman -S xorg
+sudo pacman -S xorg xorg-server base-devel
 sudo pacman -S gnome
-sudo pacman -S base-devel
-sudo pacman -S gnome-tweaks dconf-editor firefox gdm libappindicator-gtk3 flatpak gnome-disk-utility gthumb gnome-calendar
-sudo pacman -S pipewire-pulse
-sudo pacman -S papirus-icon-theme ttf-fira-sans ttf-fira-code arc-gtk-theme lib32-fontconfig ttf-liberation
+sudo pacman -S gnome-tweaks flatpak gthumb vivaldi neovim geary
+sudo pacman -S papirus-icon-theme gnome-themes-extra
 sudo systemctl enable gdm
 
-# Install yay
-cd /opt/
-sudo git clone https://aur.archlinux.org/yay-git.git
-sudo chown -R $USER:$USER ./yay-git
-cd yay-git/
-makepkg -si
-yay -Syyuu
-
-# Install coding and personal apps
-sudo pacman -S code telegram-desktop neovim git dbeaver elixir nodejs npm geary filezilla discord libreoffice-fresh
-yay -S gitkraken
-yay -S chrome-gnome-shell
+mkdir ~/.themes
+cp -R /usr/share/themes/Adwaita-dark ~/.themes/
+sudo flatpak override --filesystem=$HOME/.themes
+sudo flatpak override --env=GTK_THEME=Adwaita-dark
