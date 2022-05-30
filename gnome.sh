@@ -14,4 +14,6 @@ cp -R /usr/share/themes/Adwaita-dark ~/.themes/
 sudo flatpak override --filesystem=$HOME/.themes
 sudo flatpak override --env=GTK_THEME=Adwaita-dark
 
+gsettings set org.gnome.desktop.privacy remember-recent-files false
+
 #flatpak in /var/lib/flatpak/runtime
