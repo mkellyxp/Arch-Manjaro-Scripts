@@ -3,10 +3,10 @@
 sudo pacman -Syyuu
 
 # Install base gnome stuff
-sudo pacman -S xorg xorg-server base-devel
-sudo pacman -S gnome
-sudo pacman -S gnome-tweaks flatpak gthumb neovim docker docker-compose
-sudo pacman -S papirus-icon-theme gnome-themes-extra
+sudo pacman -S xorg xorg-server base-devel --noconfirm
+sudo pacman -S gnome --noconfirm
+sudo pacman -S gnome-tweaks flatpak gthumb neovim docker docker-compose nodejs npm --noconfirm
+sudo pacman -S papirus-icon-theme gnome-themes-extra --noconfirm
 sudo systemctl enable gdm
 
 mkdir ~/.themes
