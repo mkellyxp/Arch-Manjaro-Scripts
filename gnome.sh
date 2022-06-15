@@ -19,8 +19,8 @@ gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 
-gsettings set org.gnome.desktop.background picture-uri "file:///home/mkelly/Projects/Arch-Manjaro-Scripts/wallpaper-btw.png"
-gsettings set org.gnome.desktop.background picture-uri-dark "file:///home/mkelly/Projects/Arch-Manjaro-Scripts/wallpaper-btw.png"
+gsettings set org.gnome.desktop.background picture-uri "file://$PWD/wallpaper-btw.png"
+gsettings set org.gnome.desktop.background picture-uri-dark "file://$PWD/wallpaper-btw.png"
 
 gsettings set org.gnome.desktop.interface document-font-name 'Fira Sans 11'
 gsettings set org.gnome.desktop.interface font-name 'Fira Sans 11'
