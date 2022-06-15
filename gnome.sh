@@ -8,6 +8,7 @@ sudo pacman -S gnome --noconfirm
 sudo pacman -S gnome-tweaks gnome-shell-extension-appindicator flatpak gthumb neovim docker docker-compose nodejs npm php7 code --noconfirm
 sudo pacman -S papirus-icon-theme gnome-themes-extra ttf-fira-mono ttf-fira-sans --noconfirm
 sudo systemctl enable gdm
+sudo systemctl enable docker
 
 mkdir ~/.themes
 cp -R /usr/share/themes/Adwaita-dark ~/.themes/
