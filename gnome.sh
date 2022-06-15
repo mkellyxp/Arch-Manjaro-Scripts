@@ -9,7 +9,7 @@ sudo pacman -S gnome-tweaks gnome-shell-extension-appindicator flatpak gthumb ne
 sudo systemctl enable gdm
 
 # Install code stuff
-sudo pacman -S docker docker-compose nodejs npm php7 code --noconfirm
+sudo pacman -S docker docker-compose nodejs npm php code --noconfirm
 sudo systemctl enable docker
 
 # Install theme stuff
