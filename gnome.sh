@@ -5,10 +5,15 @@ sudo pacman -Syyuu
 # Install base gnome stuff
 sudo pacman -S xorg xorg-server base-devel --noconfirm
 sudo pacman -S gnome --noconfirm
-sudo pacman -S gnome-tweaks gnome-shell-extension-appindicator flatpak gthumb neovim docker docker-compose nodejs npm php7 code --noconfirm
-sudo pacman -S papirus-icon-theme gnome-themes-extra ttf-fira-mono ttf-fira-sans --noconfirm
+sudo pacman -S gnome-tweaks gnome-shell-extension-appindicator flatpak gthumb neovim power-profiles-daemon --noconfirm
 sudo systemctl enable gdm
+
+# Install code stuff
+sudo pacman -S docker docker-compose nodejs npm php7 code --noconfirm
 sudo systemctl enable docker
+
+# Install theme stuff
+sudo pacman -S papirus-icon-theme gnome-themes-extra ttf-fira-mono ttf-fira-sans --noconfirm
 
 mkdir ~/.themes
 cp -R /usr/share/themes/Adwaita-dark ~/.themes/
