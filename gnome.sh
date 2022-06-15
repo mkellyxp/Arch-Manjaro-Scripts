@@ -13,7 +13,7 @@ sudo pacman -S docker docker-compose nodejs npm php code --noconfirm
 sudo systemctl enable docker
 
 # Install theme stuff
-sudo pacman -S papirus-icon-theme gnome-themes-extra ttf-fira-mono ttf-fira-sans --noconfirm
+sudo pacman -S papirus-icon-theme gnome-themes-extra ttf-fira-mono ttf-fira-sans noto-fonts-emoji --noconfirm
 
 mkdir ~/.themes
 cp -R /usr/share/themes/Adwaita-dark ~/.themes/
