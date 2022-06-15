@@ -31,12 +31,14 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 
-
-
 flatpak install -y com.brave.Browser
 flatpak install -y com.axosoft.GitKraken
 flatpak install -y org.telegram.desktop
 flatpak install -y io.dbeaver.DBeaverCommunity io.dbeaver.DBeaverCommunity.Client.mariadb
 flatpak install -y com.spotify.Client
+flatpak install -y com.github.tchx84.Flatseal
+
+git clone https://github.com/mkellyxp/Docker-Lemp.git /home/$USER/Docker-Lemp
+
 
 #flatpak in /var/lib/flatpak/runtime
