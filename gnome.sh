@@ -13,12 +13,15 @@ sudo pacman -S docker docker-compose nodejs npm php code --noconfirm
 sudo systemctl enable docker
 
 # Install theme stuff
-sudo pacman -S papirus-icon-theme gnome-themes-extra ttf-fira-mono ttf-fira-sans noto-fonts-emoji --noconfirm
+sudo pacman -S papirus-icon-theme gnome-themes-extra ttf-fira-mono ttf-fira-sans ttf-fira-code noto-fonts-emoji --noconfirm
 
 mkdir ~/.themes
 cp -R /usr/share/themes/Adwaita-dark ~/.themes/
 sudo flatpak override --filesystem=$HOME/.themes
 sudo flatpak override --env=GTK_THEME=Adwaita-dark
+
+sudo cp -R hide-universal-access@akiirui.github.io /usr/share/gnome-shell/extensions/
+gnome-extensions enable hide-universal-access@akiirui.github.io
 
 gsettings set org.gnome.desktop.privacy remember-recent-files false
 gsettings set org.gnome.desktop.interface show-battery-percentage true
