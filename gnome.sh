@@ -8,6 +8,10 @@ sudo pacman -S gnome --noconfirm
 sudo pacman -S gnome-tweaks gnome-shell-extension-appindicator flatpak gthumb neovim power-profiles-daemon --noconfirm
 sudo systemctl enable gdm
 
+# Install bluetooth stuff
+sudo pacman -S bluez bluez-utils gnome-bluetooth --noconfirm
+sudo systemctl enable bluetooth
+
 # Install code stuff
 sudo pacman -S docker docker-compose nodejs npm php code --noconfirm
 sudo systemctl enable docker
