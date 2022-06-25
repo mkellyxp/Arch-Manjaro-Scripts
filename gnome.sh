@@ -54,4 +54,9 @@ flatpak install -y com.github.tchx84.Flatseal
 git clone https://github.com/mkellyxp/Docker-Lemp.git /home/$USER/Docker-Lemp
 
 
-#flatpak in /var/lib/flatpak/runtime
+# flatpak in /var/lib/flatpak/runtime
+
+# https://extensions.gnome.org/extension/1625/soft-brightness/
+# git clone https://aur.archlinux.org/chrome-gnome-shell.git
+# cd chrome-gnome-shell
+# makepkg -si
