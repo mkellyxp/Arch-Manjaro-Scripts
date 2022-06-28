@@ -5,7 +5,7 @@ sudo pacman -Syyuu
 # Install base gnome stuff
 sudo pacman -S xorg xorg-server base-devel --noconfirm
 sudo pacman -S gnome --noconfirm
-sudo pacman -S gnome-tweaks gnome-shell-extension-appindicator flatpak gthumb neovim power-profiles-daemon --noconfirm
+sudo pacman -S gnome-tweaks gnome-shell-extension-appindicator flatpak gthumb vlc neovim power-profiles-daemon --noconfirm
 sudo systemctl enable gdm
 
 # Install bluetooth stuff
@@ -50,6 +50,7 @@ flatpak install -y org.telegram.desktop
 flatpak install -y io.dbeaver.DBeaverCommunity io.dbeaver.DBeaverCommunity.Client.mariadb
 flatpak install -y com.spotify.Client
 flatpak install -y com.github.tchx84.Flatseal
+flatpak install -y flathub com.slack.Slack
 
 git clone https://github.com/mkellyxp/Docker-Lemp.git /home/$USER/Docker-Lemp
 
