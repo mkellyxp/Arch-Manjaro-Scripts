@@ -8,7 +8,7 @@ sudo pacman -Syyuu
 sudo pacman -S sway xorg-xwayland alacritty dmenu neovim git flatpak
 
 # Install theme and and easy UI to switch
-sudo pacman -S lxappearance papirus-icon-theme arc-gtk-theme
+sudo pacman -S lxappearance papirus-icon-theme arc-gtk-theme noto-fonts-emoji
 
 # Install basic apps
 sudo pacman -S grim gthumb slurp
