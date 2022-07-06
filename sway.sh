@@ -11,10 +11,10 @@ sudo pacman -S sway xorg-xwayland alacritty dmenu neovim git flatpak
 sudo pacman -S lxappearance papirus-icon-theme arc-gtk-theme
 
 # Install basic apps
-sudo pacman -S grim gthumb
+sudo pacman -S grim gthumb slurp
 
 # Install coding and personal apps
-sudo pacman -S code telegram-desktop dbeaver filezilla
+sudo pacman -S code filezilla
 
 mkdir ~/.themes
 cp -R /usr/share/themes/Arc-Dark ~/.themes/
