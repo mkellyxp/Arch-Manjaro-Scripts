@@ -1,20 +1,26 @@
 #!/bin/bash
 
-sudo pacman -Syyuu
-sudo pacman -S base-devel archlinux-keyring
-sudo pacman -Syyuu
+sudo pacman -Syyuu --noconfirm
 
 # Install base sway stuff
-sudo pacman -S sway xorg-xwayland alacritty dmenu neovim git flatpak thunar tumbler gdk-pixbuf2 ffmpegthumbnailer
+sudo pacman -S xorg xorg-server base-devel brightnessctl --noconfirm
+sudo pacman -S sway xorg-xwayland alacritty dmenu neovim git flatpak thunar tumbler gdk-pixbuf2 ffmpegthumbnailer --noconfirm
+
+
+# Install bluetooth stuff
+sudo pacman -S bluez bluez-utils gnome-bluetooth --noconfirm
+sudo systemctl enable bluetooth
 
 # Install theme and and easy UI to switch
-sudo pacman -S lxappearance papirus-icon-theme arc-gtk-theme noto-fonts-emoji
+sudo pacman -S lxappearance papirus-icon-theme arc-gtk-theme noto-fonts-emoji --noconfirm
 
 # Install basic apps
-sudo pacman -S grim gthumb slurp
+sudo pacman -S grim gthumb slurp --noconfirm
 
 # Install coding and personal apps
-sudo pacman -S code filezilla fzf ripgrep
+sudo pacman -S code fzf ripgrep --noconfirm
+sudo pacman -S docker docker-compose nodejs npm php mariadb --noconfirm
+sudo systemctl enable docker
 
 mkdir ~/.themes
 cp -R /usr/share/themes/Arc-Dark ~/.themes/
